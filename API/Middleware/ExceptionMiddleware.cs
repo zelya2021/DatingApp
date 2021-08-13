@@ -40,7 +40,7 @@ namespace API.Middleware
                 var options = new JsonSerializerOptions{PropertyNamingPolicy = JsonNamingPolicy.CamelCase};
 
                 var json = JsonSerializer.Serialize(response, options);
-
+                Console.WriteLine(json);
                 await context.Response.WriteAsync(json);
             }
         }
